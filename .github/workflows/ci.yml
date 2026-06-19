@@ -1,0 +1,20 @@
+name: CI Básico
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Mostrar mensaje
+        run: echo "Workflow ejecutado correctamente"
